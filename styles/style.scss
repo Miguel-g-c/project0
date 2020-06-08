@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+$dark_blue: rgb(6, 73, 117);
+$grey:      rgb(148, 148, 148);
+
+nav a.navbar-brand {
+  font-family: 'Press Start 2P', 'Anton', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav div ul li {
+  font-family: 'Anton', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  padding-top: 75px;
+}
+
+body.home{
+  @extend body;
+  background-color: $dark_blue;
+}
+
+.home_header {
+  font-family: 'Anton', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-shadow: 5px 3px 4px #050035;
+}
+
+h1.home_header {
+  @extend .home_header;
+  font-size: 120px;
+}
+
+h2.home_header {
+  @extend .home_header;
+  font-size: 50px;
+}
+
+h3.home_header {
+  @extend .home_header;
+  font-size: 40px;
+}
+
+hr.solid {
+  border-top: 2px solid $grey;
+}
+
+.content {
+  font-family: 'Nanum Gothic', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2.content{
+  @extend .content;
+  font-weight: bold;
+}
+
+h5.content{
+  @extend .content;
+  font-size: 15px;
+}
+
+.progress-bar{
+  background-color: $dark_blue;
+}
+
+ul.timeline {
+  @extend .content;
+  list-style-type: none;
+  position: relative;
+}
+
+ul.timeline:before {
+  content: ' ';
+  background: $grey;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+
+ul.timeline > li {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+ul.timeline > li:before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid $dark_blue;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
+.float-right {
+  color: $dark_blue;
+  font-size: 15px;
+}
+
+#h2020 {
+  font-size: 14px;
+}
+
+table {
+  font-size: 15px;
+}
+
+@media (max-width: 1200px) {
+  h1.home_header {
+    font-size: 75px;
+  }
+  h2.home_header {
+    font-size: 30px;
+  }
+  h3.home_header {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 700px) {
+  h1.home_header {
+    font-size: 50px;
+  }
+  h2.home_header {
+    font-size: 24px;
+  }
+  h3.home_header {
+    font-size: 20px;
+  }
+}
